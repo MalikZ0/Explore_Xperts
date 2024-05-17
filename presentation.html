@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="refresh" content="4; url=home.html"></meta>
+    <title>Travel Xperts</title>
+	<link rel="icon" href="common/globe.png" type="image/png">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+             background: url("presentationImg/cult.png");
+            color: var(--text-color);
+        }
+
+        :root {
+            --bg-color: #fdfdfd;
+            --text-color: #fdfdfd;
+            --main-color: #00BE4F;
+            --white-color: #fdfdfd;
+            --shade-color: rgba(0, 0, 0, 0.2);
+			--primary-color: #fff;
+        }
+
+        html {
+            font-size: 50.5%;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 7%;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            color: var(--main-color);
+            font-weight: 600;
+            cursor: default;
+			margin-right: auto;
+			opacity:0;
+			animation: slideRight 1s ease forwards;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 10rem 7% 2rem;
+        }
+		
+		.home{
+			width: 100%;
+			height: 100vh;
+			display:flex; 
+			align-items:center; 
+			padding:60px 7% 0; 
+		}
+		.home .home-content {
+			max-width:500px; 
+		}
+		.home-content h3 {
+			font-size:32px; 
+			line-height:.91;
+			opacity:0;
+			animation: slideRight 1s ease forwards;
+			animation-delay: .7s;
+			margin-bottom: 20px;
+		}
+		
+		.home-content h1 {
+			font-size:40px;
+			font-weight:700;
+			margin-bottom:3px;
+			opacity:0;
+			animation: slideRight 1s ease forwards;
+			animation-delay: 1s;			
+		}
+		.home-content p {
+			font-size:16px; 
+			opacity:0;
+			animation: slideLeft 1s ease forwards;
+			animation-delay: 1s;
+		}
+		
+		.socials a {
+			display:inline-flex; 
+			justify-content:center; 
+			align-items:center; 
+			width:40px; 
+			height:40px; 
+			background-color:#fff;
+			border-radius:#fff; 
+			box-shadow:#fff; 
+			font-size:#fff;
+			color:#fff;
+			text-decoration:none;
+			margin-right:auto;
+			transition: .5s ease;
+			opacity:0;
+			animation: slideLeft 1s ease forwards;
+			animation-delay: calc(.2s * var(--i));
+			
+			
+		    background-color:#fff; 
+		    border-radius:#fff; 
+		    box-shadow:#fff; 
+		    font-size:#fff; 
+		    color:#fff; 
+		    text-decoration:none;
+
+		    display:inline-flex;
+		    justify-content:center;
+		    align-items:center;
+
+		    width :40px ;
+		    height :40px ;
+		    background :transparent ;
+		    border :2px solid var(--main-color) ;
+		    border-radius :50% ;
+		    box-shadow :0 2px 5px rgba(0,0,0,0.2) ;
+		    font-size :20px ;
+		    color :var(--main-color) ;
+		    text-decoration :none ;
+		    margin :25px 15px 30px 0 ;
+			
+		}
+		
+		.home .services-container{
+			position: absolute ;
+			top : 50% ;
+			right :0;
+			transform: translateY(-50%);
+			width :768px ;
+			height :768px ;
+			overflow:hidden ;
+		}
+		
+		.services-container .serviceBox{
+			position: absolute;
+			top:0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity:0;
+			animation: slideLeft 1s ease forwards, professionRotate 4s ease-out infinite;
+			animation-delay: 2.5s 3.5s;
+		}
+		
+		.serviceBox .services {
+			position: absolute;
+			left:0;
+			transform-origin: 384px;
+			transform: rotate(calc(360deg / 4 * var(--i)));
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			color: var(--main-color);
+			background: var(--primary-color);
+			padding: 13px 0;
+		}
+		
+		.serviceBox .services:nth-child(1) i {
+			margin-right: 15px;
+		}
+		
+		.serviceBox .services:nth-child(2) {
+			padding-bottom: 20px;
+		}
+		
+		.serviceBox .services:nth-child(4) {
+			padding-bottom: 20px;
+		}
+		.services i {
+			font-size: 38px;
+		}
+		
+		.services h3 {
+			font-size: 32px;
+			line-height: 1;
+			font-weight: 600;
+		}
+		
+		.serviceBox .circle {
+			width: 72%;
+			height: 72%;
+			border: 3px solid var(--main-color);
+			border-radius: 50%;
+		}
+
+	.services-container .overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-top: 384px solid var(--main-color);
+		border-right: 384px solid var(--main-color);
+		border-bottom: 384px solid var(--main-color);
+		border-left: 384px solid transparent;
+		opacity:0;
+		animation: slideLeft 1s ease forwards;
+		animation-delay: o.3s;
+			
+	}
+	
+/* KEYFRAMES ANIMATIONS */
+
+@keyframes slideRight{
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+		}
+		
+	100%{
+		opacity:1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideLeft{
+	0% {
+		opacity: 0;
+		transform: translateX(100px);
+		}
+		
+	100%{
+		opacity:1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes professionRotate {
+	0%, 20%{
+		transform: rotate(0deg);
+	}
+	25%, 45% {
+		transform: rotate(-90deg);
+	}
+	
+	50%, 70% {
+		transform: rotate(-180deg);
+	}
+	
+	75%,95% {
+		transform: rotate(-270deg);
+	}
+	
+	100%{
+		transform: rotate(-360deg);
+	}
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">TRAVEL XPERTS</a>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h3>Your Travel Guider</h3>
+            <h1>TRAVEL EXPERTS</h1><br><br><br>
+            <p> Isira Wasala&nbsp;&nbsp; Sithum Perera&nbsp;&nbsp; Sahan Vimukthi&nbsp;&nbsp; Malik Kumara </p>
+
+            <div class="socials">
+                <a href="#" style="--i:7";><i class='bx bxl-facebook'></i></a>
+                <a href="#" style="--i:8"><i class='bx bxl-instagram'></i></a>
+                <a href="#" style="--i:9"><i class='bx bxl-linkedin'></i></a>
+                <a href="#" style="--i:10"><i class='bx bxl-youtube'></i></a>
+                <a href="#" style="--i:11"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+        </div>
+
+        <div class="services-container">
+            <div class="serviceBox">
+                <div class="services" style="--i:0;">
+                    <i class='bx bxs-plane-alt' ></i>
+                    <h3> Air Ticketing </h3>
+                </div>
+                <div class="services" style="--i:1;">
+                    <i class='bx bx-hotel' ></i>
+                    <h3> Residence Booking </h3>
+                </div>
+                <div class="services" style="--i:2;">
+                    <i class='bx bx-trip' ></i>
+                    <h3> Trip Guiding </h3>
+                </div>
+                <div class="services" style="--i:3;">
+                    <i class='bx bxs-hot' ></i>
+                    <h3> Camping </h3>
+                </div>
+				
+				<div class="circle"></div>
+				
+            </div>
+			<div class="overlay"></div>
+        </div>
+		
+    </section>
+</body>
+</html>

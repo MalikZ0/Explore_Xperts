@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-image: url("homebackimg.jpg");
+    background-color: #f2f2f2; /* Set the background color for the entire body */
+}
+
+.contact_us_container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    transition: all 0.3s;
+}
+.contact_us_welcome_screen{
+    background-image: url(https://images.pexels.com/photos/2191013/pexels-photo-2191013.jpeg);
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 95vh;
+    width: 100%;
+}
+.contact_us_welcome_screen_text{
+    width: 100%;
+    margin-top: 20vh;
+}
+.contact_us_welcome_screen_text h1{
+    font-size: 25vh;
+    margin: 0;
+}
+.contact_us_welcome_screen_text h3{
+    font-size: 5vh;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#thank_you{
+    text-align: center;
+}
+#thank_you h1{
+    font-size: 15vh;
+    margin: 0;
+}
+#thank_you p{
+    color: rgb(220, 198, 240);
+    font-size: 5vh;
+}
+.thank_you_text{
+    margin: 50px 40px 50px 40px;
+}
+.thank_you_text h1, .thank_you_text p{
+    margin-bottom: 30px;
+}
+.back2form_btn{
+    height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 0;
+    border-radius: 0;
+    padding: 5px 25px;
+    transition: 0.3s;
+    cursor: pointer;
+    color: white;
+    background: rgb(58, 4, 61);
+}
+.back2form_btn:hover{
+    color: rgb(0, 0, 0);
+    background: rgb(137, 20, 144);
+    transform: translate(-3px,-3px);
+    box-shadow: 3px 3px 3px black;
+}
+.back2form_btn:active{
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    box-shadow: none;
+    transform: none;
+}
+/* making 'invisible' class display none to make it invisible*/
+.invisible{
+    display: none;
+}
+/* making 'visible' class display grid to make it visible*/
+.visible{
+    display: grid;
+}
+.contact_us_form_container, #thank_you{
+    margin: 0;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    width: 100%;
+    background-color: transparent;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    background-image: url(https://images.freecreatives.com/wp-content/uploads/2015/04/black-wood.png);
+}
+.contact_us_form{
+    margin-left: 20vw;
+    margin-right: 20vw;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+    color: rgb(255, 198, 239);
+    background-color:transparent;
+    height: auto;
+    width: auto;
+}
+.form_input_container{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto auto;
+    font-size: 20px
+}
+#form_input_container_optional{
+    grid-template-rows: auto;
+}
+#rating_p{
+    display: block;
+    cursor: default;
+    width: auto;
+    padding: 0 40px 0 40px;
+    padding-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    background-color: rgba(179, 63, 185, 0.25);
+}
+.rating_container{
+    width: 100%;
+    padding: 0;
+    padding-top: 10px;
+    margin-bottom: 0;
+    background-color: rgba(179, 63, 185, 0.25);
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-bottom: 20px;
+}
+.rating_container input{
+    cursor: pointer;
+}
+.rating_container input[name="satisfication_level"]{
+    accent-color: rgb(189, 53, 189);
+}
+.contact_us_form input, select{
+    background-color: rgba(58, 4, 61, 0.4);
+    border-radius: 0;
+    border: rgba(212, 24, 222, 0.5) 3px solid;
+    color: rgb(236, 214, 236);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    display: block;
+}
+.form_input{
+    width: 100%;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    background-color: rgba(179, 63, 185, 0.25);
+}
+.form_input input{
+    width: 90%;
+}
+.form_input select{
+    width: 91%;
+}
+.form_input option{
+    background-color: black;
+}
+
+/* creating styles for error and success classes */
+.error .form_input{
+    border: rgba(237, 40, 40, 0.5) 2px solid;
+}
+.error .rating_container{
+    border: rgba(237, 40, 40, 0.5) 2px solid;
+    border-top: 0;
+}
+.error #rating_p{
+    border: rgba(237, 40, 40, 0.5) 2px solid;
+    border-bottom: 0;
+}
+.success input, .success select{
+    border-color: rgba(81, 244, 81, 0.5);
+    background-color: rgba(97, 225, 132, 0.2);
+}
+.error input, .error select{
+    border-color: rgba(237, 40, 40, 0.5);
+    background-color: rgba(225, 14, 14, 0.2);
+}
+.error ::placeholder{
+    color: rgba(237, 40, 40);
+}
+.error_msg{
+    display: none;
+    color: red;
+    font-size: small;
+    margin: 0;
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(225, 14, 14, 0.2);
+}
+.error .error_msg{
+    display: inline;
+    height: auto;
+}
+.input_error{
+    color: rgba(237, 40, 40, 0.5);
+    text-align: center;
+    height: auto;
+}
+.submit_btn{
+    text-align: center;
+    height: 40px;
+    width: 100%;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    display: inline;
+    border:rgba(212, 24, 222, 0.5) 2px solid;
+    transition: 0.2s;
+    cursor: pointer;
+    background-color: rgba(58, 4, 61, 0.4);
+    color: rgb(229, 194, 237);
+}
+.submit_btn:hover{
+    color: rgb(255, 118, 248);
+    transform: translate(0, 0.25rem);
+    box-shadow: 0 -0.25rem black;
+}
+.submit_btn:active{
+    transform: none;
+    box-shadow: none;
+    background-color: white;
+    color: black;
+}

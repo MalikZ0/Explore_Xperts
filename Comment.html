@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="icon" href="common/globe.png" type="image/png">
+    <link rel="stylesheet" href="comment.css">
+    <link rel="stylesheet" href="common/commonFile.css">
+</head>
+<body>
+    <div class="navigation">
+        <h1>Explore Xperts</h1>
+        <section>
+        <div class="earth"></div>
+        </section>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Comment.html">Comments</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="My Quiz.html">Quiz</a></li>
+            <li><a href="SiteMap.html">Site Map</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="Student details.html">About Us</a></li>
+        </ul>
+    </div>
+    <div id="top">
+        <!-- creating a container for contact us form and giving it the 'visible' class that contains 'display:grid;' attribute -->
+        <div id="contact_us_form_container" class="contact_us_form_container visible">
+            <!-- creating form and using action to mail form input to site email upon valid submit -->
+            <form class="contact_us_form" action="mailto:sithumperera17@gmail.com" method="post" enctype="text/plain">
+                <!-- using div tags to seperate individual form inputs -->
+                <div class="form_input_container">
+                    <!-- creating question with input field within seperate div -->
+                    <div class="form_input content_text">
+                        <label for="username" >Please could you tell us your name?</label>
+                        <input type="text" id="username" size="45" name="Sender Name " placeholder="Enter Your Fullname Here">
+                    </div>
+                    <!-- creating div class used by java script to print error massage when input is invalid -->
+                    <div class="error_msg"></div>
+                </div> 
+                 <!-- using before format for similar question -->
+                <div class="form_input_container">
+                    <div class="form_input content_text">
+                        <label for="email_address">Please could you tell us your email address?</label>
+                        <input type="text" id="email_address" size="45" name="Sender Email Address " placeholder="Enter Your Email Address Here">
+                    </div>
+                    <div class="error_msg"></div>
+                </div> 
+                <!-- applying id to better handle different type of input -->
+                <div id="radio_input_form" class="form_input_container content_text">
+                    <p id="rating_p">
+                        How satisfied were you with our website today? Choose from 0 to 10,
+                        where 0 is extremely dissatisfied and 10 is extremely satisfied.
+                    </p>
+                    <div class="rating_container">
+                        <!-- creating radio buttons for question -->
+                        <div class="rating">
+                            <label for="rating_1" >1</label>
+                            <input type="radio" class="rating_result" id="rating_1" name="satisfication level" value="1">
+                        </div>
+                        <div class="rating">
+                            <label for="rating_2" >2</label>
+                            <input type="radio" class="rating_result" id="rating_2" name="satisfication level" value="2">
+                        </div>
+                        <div class="rating">
+                            <label for="rating_3" >3</label>
+                            <input type="radio" class="rating_result" id="rating_3" name="satisfication level" value="3">
+                        </div>
+                        <div class="rating">
+                            <label for="rating_4" >4</label>
+                            <input type="radio" class="rating_result" id="rating_4" name="satisfication level" value="4">
+                        </div>
+                        <div class="rating">
+                            <label for="rating_5" >5</label>
+                            <input type="radio" class="rating_result" id="rating_5" name="satisfication level" value="5">
+                        </div>
+                        <div class="rating">
+                            <label for="rating_6" >6</label>
+                            <input type="radio" class="rating_result" id="rating_6" name="satisfication level" value="6">
+                        </div>
+                        <div class="rating">
+                            <label for="rating_7" >7</label>
+                            <input type="radio" class="rating_result" id="rating_7" name="satisfication level" value="7">
+                        </div>
+                        <div class="rating">
+                            <label for="rating_8" >8</label>
+                            <input type="radio" class="rating_result" id="rating_8" name="satisfication level" value="8">
+                        </div>
+                        <div class="rating">
+                            <label for="rating_9" >9</label>
+                            <input type="radio" class="rating_result" id="rating_9" name="satisfication level" value="9">
+                        </div>
+                        <div class="rating">
+                            <label for="rating_10" >10</label>
+                            <input type="radio" class="rating_result" id="rating_10" name="satisfication level" value="10">
+                        </div>
+                    </div>
+                    <!-- div class used by javascript to display error message -->
+                    <div class="error_msg"></div>
+                </div>
+                <!-- using similar format to previous text input field -->
+                <div class="form_input_container">
+                    <div class="form_input content_text">
+                        <label for="reason" >Please could you tell us your reason for giving this rating?</label>
+                        <input type="text" id="reason" size="45" name="Reason for rating" placeholder="Enter Your Reason For Given Rating">
+                    </div>
+                    <div class="error_msg"></div>
+                </div> 
+                <!-- giving unique id to better handle optional input -->
+                <div class="form_input_container" id="form_input_container_optional">
+                    <!-- using form_input class for input field -->
+                    <div class="form_input content_text">
+                        <label for="task_method">How did you want to complete this task today? (optional)</label>
+                        <select name="Task completion method" id="task_method" size="1">
+                            <option value="Not-selected">--Please Select--</option>
+                            <option value="phone">Phone</option>
+                            <option value="website">Website</option>
+                            <option value="Webchat">Webchat</option>
+                            <option value="social_media">Social media</option>
+                            <option value="email">Email</option>
+                        </select>
+                    </div>
+                    <!-- no error_msg div class since field is optional -->
+                </div> 
+                <!-- applying similar format to previous optional field -->
+                <div class="form_input_container" id="form_input_prefer_container_optional">
+                    <div class="form_input content_text">
+                        <label for="task_method_prefer">If you had to complete this task again, how would you prefer to do it? (optional)</label>
+                        <select name="Prefered task completion method" id="task_method_prefer" size="1">
+                            <option value="Not-selected">--Please Select--</option>
+                            <option value="phone">Phone</option>
+                            <option value="website">Website</option>
+                            <option value="Webchat">Webchat</option>
+                            <option value="social_media">Social media</option>
+                            <option value="email">Email</option>
+                        </select>
+                    </div>
+                </div>
+                 <!--creating submit button for form  -->
+                <button class="submit_btn" type="submit">SUBMIT</button>
+            </form>
+        </div>
+        <!-- creating the 'thank you' screen within div and applying invisible class which contains display: none; as an attribute to keep screen hidden till valid submission -->
+        <div id="thank_you" class="thank_you invisible">
+            <div class="thank_you_text">
+                <h1 class="main_topic">THANK YOU FOR YOUR FEEDBACK</h1>
+                <p class="main_topic">Thank you for taking the time to give us your feedback on your experience today.</p>
+                <!-- creating a back to form button that toggles the invisible and visible classes of thanK you screen and form -->
+                <button onclick="back_to_form()" class="back2form_btn">BACK TO FORM</button>
+            </div>
+        </div>
+        <!-- applying footer -->
+        <div class="foooter">
+            <a class="back2top" href="#top">&lowast;</a>
+            <div class="socialMedia">
+                <a class="fb" href="https://www.facebook.com">
+                <img class="socialLogo" src="common/facebook-icon.png" alt="Facebook">
+                </a>
+                <a class="insta" href="http://www.instagram.com">
+                <img class="socialLogo" src="common/instagram-icon.png" alt="Instergram">
+                </a>
+                <a class="twit" href="https://twitter.com">
+                <img class="socialLogo" src="common/twitter-icon.png" alt="Twitter">
+                </a>
+            </div>
+            <div class="copyright">&copy; 2023 All Rights Reserved by Explore Xperts</div>
+            <div class="pageEditor">
+                <a href="SiteMap.html">Sitemap </a>&nbsp;&nbsp;<a href="page_editor(Sithum).html"> Page Editor</a>
+            </div>
+        </div>
+    <!-- importing java script used in navi_bar and contact_us_form -->
+    <script src="comment.js"></script>
+</body>
+</html>

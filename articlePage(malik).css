@@ -1,0 +1,273 @@
+/* import font*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+*{
+   font-family: 'Nunito', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   transition: all .2s linear;      /*effect for delaying styling / make them smooth*/
+   text-transform: capitalize;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+body{
+   background: #0a093f;
+}
+
+.top-area{
+   width: 100%;
+   height: 100vh;
+   background:linear-gradient(90deg,rgba(0,0,0,0.8), rgba(245, 240, 240, 0.5)),url(articleImages_malik/flimTourism.jpg);  /*add blur image for background */
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   background-attachment:fixed;
+}
+.top-area .pageTitle{
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.top-area .pageTitle .content{
+   text-align: center;
+   text-transform: uppercase;
+}
+.top-area .pageTitle .content h1{
+   font-size: 10rem;
+   font-weight: 500;
+   color: #fff;
+}
+.box1{
+    max-width: 1200px;
+    margin:10px auto 10px auto;
+    padding:3rem 2rem;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 2rem;
+    font-weight: 500;
+    background: #ffffff;
+    text-transform: capitalize;
+}
+.firstT, .secondT, .thirdT, .fourthT{
+    padding: 5px 0 5px 0;
+    text-transform: uppercase;
+}
+.box1:hover{
+    border: 2px solid greenyellow;
+    box-shadow: 0 0 40px greenyellow;
+    color: rgb(255, 255, 255);
+    background: #000000;
+    text-indent: 1rem;
+}
+.container1{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:3rem 2rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+    text-transform: capitalize;
+}
+
+.container1 .box2,.container1 .box3{
+    text-align: center;
+    border: 1px solid black;
+    font-size: 2rem;
+    font-weight: 500;
+    background: #fff;
+}
+.container1 .box2:hover,.container1 .box3:hover{
+    border: 2px solid greenyellow;
+    color: rgb(255, 255, 255);
+    background: #000000;
+    text-indent: 1rem;
+    box-shadow: 0 0 40px greenyellow;
+}
+.container2{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:3rem 2rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+    text-transform: capitalize;
+}
+.container2 .thirdT{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+    color: #fff;
+    border: 1px solid black;
+    font-size: 2rem;
+    font-weight: 500;
+    background-image: url(articleImages_malik/behindCamera.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+.container2 .thirdT:hover{
+    border: 2px solid greenyellow;
+    box-shadow: 0 0 40px greenyellow;
+    color: rgb(255, 255, 255);
+    background: #000000;
+    text-indent: 1rem;
+}
+.container2 .Box1,.container2 .Box2,.container2 .Box3{
+    text-align: center;
+    border: 1px solid black;
+    font-size: 2rem;
+    font-weight: 500;
+    background: #fff;
+}
+.container2 .Box1:hover,.container2 .Box2:hover,.container2 .Box3:hover{
+    border: 2px solid greenyellow;
+    color: rgb(255, 255, 255);
+    background: #000000;
+    text-indent: 1rem;
+    box-shadow: 0 0 40px greenyellow;
+}
+.container2 .one{
+    text-transform: capitalize;
+    font-size: 2.5rem;
+}
+.container2 .imageBin img{
+    max-height: 50vh;
+    min-width: 100%;
+}
+.container2 .imageBox{
+    max-height: 50vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.container2 .imageBin {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+ }
+  
+ .container2 .imageBin .arrow, .container2 .imageBin .arrow {
+    position: static;
+    top: 50%;
+    transform: translateY(-5px);
+    color: #071001ee;
+    background: rgba(255, 255, 255, 0.4);
+    border:1px solid black;
+    cursor: pointer;
+ }
+ .arrow{
+    padding: 4px;
+    font-size: 30px;
+ }
+ .arrow:hover{
+    color: #13e736;
+ }
+  
+ .left {
+    float: left;
+    left: 5px;
+ }
+  
+ .right {
+    float: right;
+    right: 5px;
+ }
+.container3{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:3rem 2rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+    text-transform: capitalize;
+}
+.container3 .box1,.container3 .box2{
+    text-align: center;
+    border: 1px solid black;
+    font-size: 2rem;
+    font-weight: 500;
+    background: #fff;
+}
+.container3 .box2{
+    padding: 3rem 2rem 3rem;
+}
+.container3 .box1:hover,.container3 .box2:hover{
+    border: 2px solid greenyellow;
+    color: rgb(255, 255, 255);
+    background: #000000;
+    text-indent: 1rem;
+    box-shadow: 0 0 40px greenyellow;
+}
+.container3 a{
+    position: relative;
+    background: #fff;
+    color: #fff ;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.5em;
+    letter-spacing: 0.1em;
+    font-weight: 200;
+    padding: 10px 30px;
+    transition: 0.5s;
+  }
+  .container3 a:hover{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+  }
+  .container3 a::before{
+    content:'';
+    position: absolute;
+    inset: 2px;
+    background: #1a1313;
+  }
+  .container3 a span{
+    position: relative;
+    z-index: 1;
+  }
+  .container3 a i{
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+  .container3 a i::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: #1a1313;
+    transform: translateX(-50%) skew(325deg);
+  }
+  .container3 a:hover i::before{
+    width:20px;
+    left: 20%;
+  }
+  .container3 a i::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background: #1a1313;
+    transform: translateX(-50%) skew(325deg);
+  }
+  .container3 a:hover i::after{
+    width:20px;
+    left: 80%;
+  }
+  .container2{
+    background:linear-gradient(90deg,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url(articleImages_malik/behindCamera.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+  }

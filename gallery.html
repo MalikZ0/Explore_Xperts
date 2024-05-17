@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gallery</title>
+   <link rel="icon" href="common/globe.png" type="image/png">
+   <!-- font awesome cdn link, add symbols, fonts -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="gallery.css">
+   <link rel="stylesheet" href="common/commonFile.css">
+
+   <!-- custom js file link  -->
+   <script src="gallery.js" defer></script>
+
+</head>
+   <body>
+      <div class="navigation">
+         <h1>Explore Xperts</h1>
+         <div class="earth"></div>
+         <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Comment.html">Comments</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="My Quiz.html">Quiz</a></li>
+            <li><a href="SiteMap.html">Site Map</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="Student details.html">About Us</a></li>
+         </ul>
+      </div>
+     <!--front page style-->
+      <div class="top-area">
+         <div class="pageTitle" id="top">
+             <div class="content">
+                 <h1>GALLERY</h1>
+             </div>
+         </div>
+      </div>
+      <!--second page style-->
+      <div class="products-review">
+         <h4> top <span class="top1">&#35;6</span> most visited places</h4>
+         <!-- change font size and background color-->
+         <div class="themes">
+            <div class="modeEditor">
+               <button type="button" class="dark-Theme" onclick="turnDark()"></button>
+               <button type="button" class="light-Theme" onclick="turnLight()"></button>
+               <button type="button" class="rgb-Theme" onclick="turnRgb()"></button>
+            </div>
+            <div class="fontSizer">
+              <button type="button" class="smallSize" onclick="smallSize()">A</button>
+              <button type="button" class="mediumSize" onclick="mediumSize()">A</button>
+              <button type="button" class="largeSize" onclick="largeSize()">A</button>
+            </div>
+         </div>
+
+         <div class="theBox">
+            
+            <div class="product" data-name="p-1">
+               <img src="galleryImages/dubai1.jpg" alt="dubai">
+               <h3>dubai</h3>
+            </div>
+
+            <div class="product" data-name="p-2">
+               <img src="galleryImages/japan1.jpg" alt="japan">
+               <h3>japan</h3>
+            </div>
+
+            <div class="product" data-name="p-3">
+               <img src="galleryImages/srilanka1.jpg" alt="srilanka">
+               <h3>srilanka</h3>
+            </div>
+
+            <div class="product" data-name="p-4">
+               <img src="galleryImages/newzealand1.jpg" alt="new zealand">
+               <h3>new zealand</h3>
+            </div>
+
+            <div class="product" data-name="p-5">
+               <img src="galleryImages/parris1.jpg" alt="parris">
+               <h3>parris</h3>
+            </div>
+
+            <div class="product" data-name="p-6">
+               <img src="galleryImages/england1.jpg" alt="england">
+               <h3>england</h3>
+            </div>
+
+         </div>
+
+      </div>
+
+      <div class="products-preview">
+
+         <div class="preview" data-target="p-1">
+            <i class="fas fa-times"></i>         <!-- i element used for diplay icons-->
+            <div class="image-box">
+               <div class="image-container">
+                  <img src="galleryImages/dubai1.jpg" alt="dubai">
+                  <img src="galleryImages/dubai2.jpg" alt="dubai">
+                  <img src="galleryImages/dubai3.jpg" alt="dubai">
+                  <img src="galleryImages/dubai4.jpg" alt="dubai">
+                  <img src="galleryImages/dubai5.jpg" alt="dubai">
+               </div>
+               <button class="arrow left">&larr;</button>
+               <button class="arrow right">&rarr;</button>
+            </div>
+            <h3> dubai</h3>
+            <div class="stars">
+               <i class="fas fa-star"></i>        <!-- "fas fa-star" class is used with the Font Awesome icon library to display a star icon.-->
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+               <span>( 300 vistited )</span>
+            </div>
+            <p>Located in the United Arab Emirates, known for the iconic Burj Khalifa, Desert Safari, and shopping at Dubai Mall. 
+               Embraces a blend of Arabic culture and modern luxury. </p>
+            <div class="content">known for "<b>City of Gold</b>"</div>
+         </div>
+
+         <div class="preview" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <div class="image-box">
+               <div class="image-container">
+                  <img src="galleryImages/japan1.jpg" alt="japan">
+                  <img src="galleryImages/japan2.jpg" alt="japan">
+                  <img src="galleryImages/japan3.jpg" alt="japan">
+                  <img src="galleryImages/japan4.jpg" alt="japan">
+                  <img src="galleryImages/japan5.jpg" alt="japan">
+               </div>
+               <button class="arrow left">&larr;</button>
+               <button class="arrow right">&rarr;</button>
+            </div>
+            <h3> japan</h3>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+               <span>( 296 vistited )</span>
+            </div>
+            <p>Situated in East Asia, famous for Mount Fuji, Tokyo Tower, and Kyoto's historic temples. 
+               Rich in history,Deep-rooted cultural traditions and renowned for their respectful hospitality.</p>
+            <div class="content">known for "<b>Land of the Rising Sun</b>"</div>
+         </div>
+
+         <div class="preview" data-target="p-3">
+            <i class="fas fa-times"></i>
+            <div class="image-box">
+               <div class="image-container">
+                  <img src="galleryImages/srilanka1.jpg" alt="srilanka">
+                  <img src="galleryImages/srilanka2.jpg" alt="srilanka">
+                  <img src="galleryImages/srilanka3.jpg" alt="srilanka">
+                  <img src="galleryImages/srilanka4.jpg" alt="srilanka">
+                  <img src="galleryImages/srilanka5.jpg" alt="srilanka">
+               </div>
+               <button class="arrow left">&larr;</button>
+               <button class="arrow right">&rarr;</button>
+            </div>
+            <h3> srilanka</h3>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+               <span>( 450 vistited )</span>
+            </div>
+            <p>An island nation in South Asia, renowned for Sigiriya Rock, pristine beaches, and tea plantations. 
+               Embraces diverse cultures and warm hospitality.</p>
+            <div class="content">known for "<b>Pearl of the Indian Ocean</b>"</div>
+         </div>
+
+         <div class="preview" data-target="p-4">
+            <i class="fas fa-times"></i>
+            <div class="image-box">
+               <div class="image-container">
+                  <img src="galleryImages/newzealand1.jpg" alt="new zealand">
+                  <img src="galleryImages/newzealand2.jpg" alt="new zealand">
+                  <img src="galleryImages/newzealand3.jpg" alt="new zealand">
+                  <img src="galleryImages/newzealand4.jpg" alt="new zealand">
+                  <img src="galleryImages/newzealand5.jpg" alt="new zealand">
+               </div>
+               <button class="arrow left">&larr;</button>
+               <button class="arrow right">&rarr;</button>
+            </div>
+            <h3> new zealand</h3>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+               <span>( 220 vistited )</span>
+            </div>
+            <p>Located in the southwestern Pacific Ocean, known for Milford Sound, Waitomo Glowworm Caves, and stunning landscapes.
+               Embraces Maori culture and offers a friendly atmosphere.</p>
+            <div class="content">known for "<b>Country of Friendliness</b>"</div>
+         </div>
+
+         <div class="preview" data-target="p-5">
+            <i class="fas fa-times"></i>
+            <div class="image-box">
+               <div class="image-container">
+                  <img src="galleryImages/parris1.jpg" alt="parris">
+                  <img src="galleryImages/parris2.jpg" alt="parris">
+                  <img src="galleryImages/parris3.jpg" alt="parris">
+                  <img src="galleryImages/parris4.jpg" alt="parris">
+                  <img src="galleryImages/parris5.jpg" alt="parris">
+               </div>
+               <button class="arrow left">&larr;</button>
+               <button class="arrow right">&rarr;</button>
+            </div>
+            <h3> parris</h3>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+               <span>( 240 vistited )</span>
+            </div>
+            <p>The capital of France, famous for the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral.
+               Rich in art, fashion, and renowned for romantic hospitality.</p>
+            <div class="content">known for "<b>City of Love</b>"</div>
+         </div>
+
+         <div class="preview" data-target="p-6">
+            <i class="fas fa-times"></i>
+            <div class="image-box">
+               <div class="image-container">
+                  <img src="galleryImages/england1.jpg" alt="england">
+                  <img src="galleryImages/england2.jpg" alt="england">
+                  <img src="galleryImages/england3.jpg" alt="england">
+                  <img src="galleryImages/england4.jpg" alt="england">
+                  <img src="galleryImages/england5.jpg" alt="england">
+               </div>
+               <button class="arrow left">&larr;</button>
+               <button class="arrow right">&rarr;</button>
+            </div>
+            <h3> england</h3>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+               <span>( 150 vistited )</span>
+            </div>
+            <p>Part of the United Kingdom, known for Big Ben, Buckingham Palace, and Stonehenge.
+               Rich in literature, theatre, and welcoming culture.</p>
+            <div class="content">known for "<b>The Land of Hope and Glory</b>"</div>
+         </div>
+      </div>
+      <!--footer styling-->
+      <div class="foooter">
+         <a class="back2top" href="#top">&lowast;</a>
+         <div class="socialMedia">
+             <a class="fb" href="https://www.facebook.com">
+               <img class="socialLogo" src="common/facebook-icon.png" alt="Facebook">
+             </a>
+             <a class="insta" href="http://www.instagram.com">
+               <img class="socialLogo" src="common/instagram-icon.png" alt="Instergram">
+             </a>
+             <a class="twit" href="https://twitter.com">
+               <img class="socialLogo" src="common/twitter-icon.png" alt="Twitter">
+             </a>
+         </div>
+         <div class="copyright">&copy; 2023 All Rights Reserved by Explore Xperts</div>
+         <div class="pageEditor">
+             <a href="SiteMap.html">Sitemap </a>&nbsp;&nbsp;<a href="page_editor(Malik).html"> Page Editor</a>
+         </div>
+      </div>
+
+   </body>
+</html>

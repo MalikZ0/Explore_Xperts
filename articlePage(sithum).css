@@ -1,0 +1,125 @@
+/* styles.css */
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+/* import font types */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+body {
+  background-image: url("article_sithum/sea.jpg");
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.navigation{
+  top: 0;
+}
+header {
+  background-color: navy;
+  text-align: center;
+  padding: 15px;
+}
+
+header h1 {
+  font-family: 'Nunito', sans-serif;
+  color: #1100ff;
+  background-image: -webkit-linear-gradient(0deg, #ef30b9 0%, #8dd5ff 46%, #13e736 86%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-emphasis-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.picture{
+    padding: 30px;
+    width: 300px;
+    height: 300px;
+}
+h2 {
+    
+    margin: 5px;
+    border: solid red;
+    text-align: center;
+    color: darkgreen;
+}
+p {
+    font-size: 120%;
+    padding: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 50px;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: navy;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialMedia {
+  padding-left: 100px;
+  width: 80%;
+}
+
+.socialLogo {
+  display: inline;
+  width: 2vw;
+  margin: 1vw;
+  border-radius: 5px;
+}
+
+.pageEditor {
+  text-align: center;
+  font-size: xx-large;
+  margin: auto;
+}
+
+.pageEditor a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: x-large;
+  transition: color 0.3s;
+}
+
+.back2top {
+  text-decoration: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  line-height: 20px;
+  padding: 1px 0px 1px 0px;
+  font-size: 50px;
+  font-weight: 100;
+  color: #00b7ff;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.back2top:hover,
+.pageEditor a:hover {
+  box-shadow: 0px 0px 400px 86px #a481ff;
+  text-decoration: none;
+  background-color: rgba(230, 224, 224, 0.5);
+}
+#about{
+    margin-top: 150px;
+}
+
+/* Adjust the size of the images for smaller screens */
+@media only screen and (max-width: 768px) {
+  .containers {
+    max-width: 600px;
+  }
+
+  .slides img {
+    width: 100%;
+    height: auto;
+  }
+}

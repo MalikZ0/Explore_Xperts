@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+	<link href="common/commonFile.css" rel="stylesheet">
+	<title> Shop </title>
+	<link rel="icon" href="common/globe.png" type="image/png">
+</head>
+	
+<style>
+	.navigation{
+		position: relative;
+	}
+	
+	/* align the heading and make it bold' */
+	
+	.heading {
+		text-decoration: bold;
+		text-align: center;
+		font-size: 27px;
+	}
+	
+	/* change the colour of 'journey' */
+	
+	.products .heading span {
+	  color: white; /* Use 'color' instead of 'font-color' */
+	  background-color: green;
+	  padding: 6px;
+	}
+	
+	/* add 10 grids in 2 rows */
+	
+	.product-container{
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+		grid-template-rows: repeat(2, auto);			
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+	
+	/* create boxes and add spaces between each box and add border,shadow */
+	
+	.product-container .box {
+		position: relative;
+		padding: 10px;
+		border: 1px solid #ccc;
+		box-shadow: gray 0px 4px 8px;
+		max-width: 240px;
+		height: 350px;
+		overflow: hidden;
+	}
+
+	/* set width and height of the images in the box */
+
+	.product-container .box img {
+		width: 100%; 
+		height: auto; 
+	}
+	
+	/* decorate the country names */
+	
+	.product-container .box .content h2 {
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+	
+	/* add color to stars(rating) */
+	
+	.product-container .box .content .stars .bx{
+		color: #fda702;
+	}
+	
+	/* add colors to cart icons and set the size */
+	
+	.product-container .box .bx-cart-alt{
+		position:absolute;
+		bottom:0;
+		right:0;
+		padding: 10px;
+		font-size: 24px;
+		background: #00C853;
+		color: #fff;
+	}
+	
+	/* add hover for the cart icons */
+	
+	.product-container .box .bx-cart-alt:hover{
+		background: black;
+	}
+	
+	/* add hover to turn the image */
+	
+	.product-container .box:hover img{
+		-webkit-transform: scaleX(-1);
+		transform: scaleX(-1);
+		transition: 0.5s;
+	}
+	
+	/* hide the image to maintain the size of the boxs */
+		
+	/*.product-container .box img {
+		display: none;
+    }*/
+	
+	/* add images as covers */
+	
+	.product-container .box {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	
+	/* getting each images by calling their saved name as background images */
+	
+	/*.product-container .box:nth-child(1) {
+		background-image: url('shop/srilanka.jpeg');
+	}	
+	
+	.product-container .box:nth-child(2) {
+		background-image: url('shop/india.jpg');
+	}
+	
+	.product-container .box:nth-child(3) {
+		background-image: url('shop/bali.jpg');
+	}
+	
+	.product-container .box:nth-child(4) {
+		background-image: url('shop/malaysia.jpg');
+	}
+	
+	.product-container .box:nth-child(5) {
+		background-image: url('shop/china.jpg');
+	}
+	
+	.product-container .box:nth-child(6) {
+		background-image: url('shop/singapore.jpg');
+	}
+	
+	.product-container .box:nth-child(7) {
+		background-image: url('shop/aus.jpg');
+	}
+	
+	.product-container .box:nth-child(8) {
+		background-image: url('shop/dubai.jpg');
+	}
+	
+	.product-container .box:nth-child(9) {
+		background-image: url('shop/indonese.jpeg');
+	}
+	
+	.product-container .box:nth-child(10) {
+		background-image: url('shop/greece.jpg');
+	}
+	*/
+	/* arrange container class's child elements horizontally*/
+	
+	.container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	/* set initial width for every element in products class */
+
+	.products {
+		flex-basis: calc(70% - 1rem);
+	}
+	
+	
+</style>
+
+</head>
+<body>
+
+	<div class="navigation">
+	<h1>Explore Xperts</h1>
+	<section>
+	<div class="earth"></div>
+	</section>
+	<ul>
+		<li><a href="Home.html">Home</a></li>
+		<li><a href="Comment.html">Comments</a></li>
+		<li><a href="shop.html">Shop</a></li>
+		<li><a href="My Quiz.html">Quiz</a></li>
+		<li><a href="SiteMap.html">Site Map</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+		<li><a href="Student details.html">About Us</a></li>
+	</ul>
+	</div>
+
+<!-- contain heading and products -->
+	<section class="products" id="products">
+	<div class="heading" id="top">
+		<br><br><br><h1> BOOK YOUR <span>JOURNEY</span></h1>
+	</div>
+	<div class="product-container">
+		<div class="box">
+		<!-- adding product image and its name-->
+			<img src="shop/srilanka.jpeg" alt="">
+			<div class="content">
+				<h2> Sri Lanka </h2>
+				<!-- adding boxicons usage fonts (stars) in a list -->
+				<div class="stars">
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star-half'></i>
+				</div>
+				<!-- adding price in span tag -->
+				<span>$450</span>
+				<!-- adding boxicons usage font (cart) in a list -->
+				<i class='bx bx-cart-alt'></i>
+				<!-- adding product desctiption in paragraph tag -->
+				<p> 1 week <br> 3 luxury villas <br> 1 road trip <br> *per person</p>
+			</div>
+		</div>
+		
+		<div class="box">
+		<!-- adding product image and its name-->
+			<img src="shop/india.jpg" alt="">
+			<div class="content">
+				<h2> India </h2>
+				<!-- adding boxicons usage fonts (stars) in a list -->
+				<div class="stars">
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star-half'></i>
+				</div>
+				<!-- adding price in span tag -->
+				<span>$550</span>
+				<!-- adding boxicons usage font (cart) in a list -->
+				<i class='bx bx-cart-alt'></i>
+				<!-- adding product desctiption in paragraph tag -->
+				<p> 2 weeks <br> 3 luxury villas <br> 2 camping nights <br> 2 day trip<br>*per person</p>
+			</div>
+		</div>		
+		<div class="box">
+		<!-- adding product image and its name-->
+			<img src="shop/bali.jpg" alt="">
+			<div class="content">
+				<h2> Bali </h2>
+				<!-- adding boxicons usage fonts (stars) in a list -->
+				<div class="stars">
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star-half'></i>
+				</div>
+				<!-- adding price in span tag -->
+				<span>$700</span>
+				<!-- adding boxicons usage font (cart) in a list -->
+				<i class='bx bx-cart-alt'></i>
+				<!-- adding product desctiption in paragraph tag -->
+				<p> 2 weeks <br> 4 luxury villas <br> 2 day road trip <br> *per person</p>
+			</div>
+		</div>		
+		
+		<!-- following code blocks are adding boxicons usage font (cart) in a list, adding product desctiptions, adding cart icons from boxicons, adding price -->
+		<div class="box">
+			<img src="shop/malaysia.jpg" alt="">
+			<div class="content">
+				<h2> Malaysia </h2>
+				
+				<div class="stars">
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star-half'></i>
+				</div>
+				<span>$750</span>
+				<i class='bx bx-cart-alt'></i>
+				<p> 2 weeks <br> 4 luxury hotels <br> 2 day off road trip <br> *per person</p>
+			</div>
+		</div>	
+		<div class="box">
+			<img src="shop/china.jpg" alt="">
+			<div class="content">
+				<h2> China </h2>
+				
+				<div class="stars">
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star-half'></i>
+				</div>
+				<span>$550</span>
+				<i class='bx bx-cart-alt'></i>
+				<p> 2 weeks <br> 4 luxury hotels <br> 3 day road trip <br> *per person</p>
+			</div>
+		</div>			
+		<div class="box">
+			<img src="shop/singapore.jpg" alt="">
+			<div class="content">
+				<h2> Singapora </h2>
+				
+				<div class="stars">
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star-half'></i>
+				</div>
+				<span>$750</span>
+				<i class='bx bx-cart-alt'></i>
+				<p> 2 weeks <br> 4 luxury hotels <br> 1 day road trip <br> 5% discount (shopping)<br> *per person</p>
+			</div>
+		</div>		
+		<div class="box">
+			<img src="shop/aus.jpg" alt="">
+			<div class="content">
+				<h2> Australia </h2>
+				
+				<div class="stars">
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star-half'></i>
+				</div>
+				<span>$850</span>
+				<i class='bx bx-cart-alt'></i>
+				<p> 2 weeks <br> 4 luxury villas <br> 1 day off road trip <br> 3 day camping <br> *per person</p>
+			</div>
+		</div>		
+		<div class="box">
+			<img src="shop/dubai.jpg" alt="">
+			<div class="content">
+				<h2> Dubai </h2>
+				
+				<div class="stars">
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star-half'></i>
+				</div>
+				<span>$650</span>
+				<i class='bx bx-cart-alt'></i>
+				<p> 2 weeks <br> 4 luxury hotels <br> sky diving <br> 2 days raod trip <br> *per person</p>
+			</div>
+		</div>		
+		
+		<div class="box">
+			<img src="shop/indonese.jpeg" alt="">
+			<div class="content">
+				<h2> Indonesia </h2>
+				
+				<div class="stars">
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star-half'></i>
+				</div>
+				<span>$550</span>
+				<i class='bx bx-cart-alt'></i>
+				<p> 2 weeks <br> 4 luxury hotels <br> 1 day road trip <br> *per person</p>
+			</div>
+		</div>	
+		<div class="box">
+			<img src="shop/greece.jpg" alt="">
+			<div class="content">
+				<h2> Greece </h2>
+				
+				<div class="stars">
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star'></i>
+					<i class='bx bxs-star-half'></i>
+				</div>
+				<span>$650</span>
+				<i class='bx bx-cart-alt'></i>
+				<p> 2 weeks <br> 4 luxury hotels <br> 2 day road trip <br>1 camping night <br> *per person</p>
+			</div>
+		</div>	
+	</div>
+</section>
+
+<hr>
+<!-- separate division for cart -->
+  <div class="cart-container">
+    <div class="cart-heading">
+	<!-- heading for cart -->
+      <h2>Cart</h2> 
+    </div>
+	<!-- create unordered list for hold user selected items-->
+    <ul class="cart-items" id="cart-items"></ul>
+    <div class="cart-footer">
+	<!-- gets total bill in the footer of the cart -->
+	  <p>Total: <span id="total-price">$0</span></p>
+	  <!-- adding two buttons called clear cart and proceed to pay. decorating them by in-line styling-->
+	  <button id="clear-cart" style="background-color: green; padding: 5px; border-radius: 10%; color: white;">Clear Cart</button>
+      <button id="proceed-to-pay" style="background-color: green; padding: 5px; border-radius: 10%; color: white;">Proceed to Pay</button>
+    </div>
+  </div>
+  
+<div class="foooter">
+            <a class="back2top" href="#top">&lowast;</a>
+            <div class="socialMedia">
+                <a class="fb" href="https://www.facebook.com">
+                <img class="socialLogo" src="common/facebook-icon.png" alt="Facebook">
+                </a>
+                <a class="insta" href="http://www.instagram.com">
+                <img class="socialLogo" src="common/instagram-icon.png" alt="Instergram">
+                </a>
+                <a class="twit" href="https://twitter.com">
+                <img class="socialLogo" src="common/twitter-icon.png" alt="Twitter">
+                </a>
+            </div>
+            <div class="copyright">&copy; 2023 All Rights Reserved by Explore Xperts</div>
+            <div class="pageEditor">
+                <a href="shop.html">Shop </a>&nbsp;&nbsp;<a href="page_editor(isira).html"> Page Editor</a>
+            </div>
+        </div>
+  
+<script>
+
+
+	// Obtain the cart's items container and its clear cart button.
+	const cartItemsContainer = document.getElementById('cart-items');
+	const clearCartButton = document.getElementById('clear-cart');
+
+	// Make an epty array to hold the products in the cart.
+	let cartItems = [];
+
+	// Create new variable to store total bill
+	let totalCost = 0;
+
+	// Function to Update the content of the cart
+	function updateCart() {
+	cartItemsContainer.innerHTML = ''; 
+
+	cartItems.forEach(item => {
+		const li = document.createElement('li');
+		li.textContent = item;
+		cartItemsContainer.appendChild(li);
+	});
+
+	// Make a total cost calculation and update the UI
+	const totalPriceElement = document.getElementById('total-price');
+	totalPriceElement.textContent = `$${totalCost.toFixed(2)}`;
+	}
+
+	// create function tp add an item to the cart
+	function addToCart(itemName, itemPrice) {
+	cartItems.push(itemName);
+	totalCost += itemPrice;
+	updateCart();
+	// maintain availability of proceed to pay button 
+	updateProceedButtonAvailability(); 
+	}
+
+	// create function to remove each item from the cart
+	function removeFromCart(itemName, itemPrice) {
+	const itemIndex = cartItems.indexOf(itemName);
+	if (itemIndex !== -1) {
+		cartItems.splice(itemIndex, 1);
+		totalCost -= itemPrice;
+		updateCart();
+	// maintain availability of proceed to pay button 
+		updateProceedButtonAvailability();
+	}
+	}
+
+	// creating function to clear the cart
+	function clearCart() {
+	cartItems = [];
+	totalCost = 0;
+	updateCart();
+	// maintain availability of proceed to pay button 
+	updateProceedButtonAvailability(); 
+	}
+
+	// Event listener for the click of the cart icon
+	const cartIcons = document.querySelectorAll('.bx-cart-alt');
+	cartIcons.forEach(icon => {
+	icon.addEventListener('click', event => {
+		const productName = event.target.closest('.box').querySelector('h2').textContent;
+		const productPrice = parseFloat(event.target.closest('.box').querySelector('span').textContent.replace('$', ''));
+		addToCart(productName, productPrice);
+	});
+	});
+
+	// the clear cart button's event listener
+	clearCartButton.addEventListener('click', clearCart);
+
+	// create function to redirect to the checkout page
+
+	function redirectToCheckoutPage() {
+	const cartItemsString = cartItems.join(',');
+	const totalString = totalCost.toFixed(2);
+	const checkoutURL = `checkout.html?items=${encodeURIComponent(cartItemsString)}&total=${totalString}`;
+	window.location.href = checkoutURL;
+	}
+
+
+	// create funtion to update the availability of the proceed to pay button
+	function updateProceedButtonAvailability() {
+	const proceedToPayButton = document.getElementById('proceed-to-pay');
+	proceedToPayButton.disabled = cartItems.length === 0;
+	}
+
+	// calling proceedToPayButton
+	updateProceedButtonAvailability();
+
+	// update proceed to pay button to redirect to the checkout page
+	const proceedToPayButton = document.getElementById('proceed-to-pay');
+	proceedToPayButton.addEventListener('click', redirectToCheckoutPage);
+
+		
+</script>
+</body>
+</html>

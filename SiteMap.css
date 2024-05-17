@@ -1,0 +1,71 @@
+/*import font*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+ 
+body{
+    background: #eee;
+}
+ 
+.top-area{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(90deg,rgba(0,0,0,0.8), rgba(245, 240, 240, 0.5)),url(worldmap.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+.top-area .pageTitle{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-area .pageTitle .content{
+    text-align: center;
+    text-transform: uppercase;
+}
+.top-area .pageTitle .content h1{
+    font-size: 10rem;
+    font-weight: 500;
+    color: #fff;
+}
+.SVG g rect{
+    fill: rgb(90, 50, 235);
+    stroke: rgb(149, 255, 0);
+    stroke-width: 2;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.SVG g:hover rect{
+    fill: rgb(255, 255, 255);
+    text-shadow: 0 0 35px rgb(0, 255, 17);
+}
+.SVG g text{
+    fill: rgba(244, 224, 4);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.SVG .links{
+    color: rgba(244, 224, 4);
+}
+.SVG g:hover text{
+    fill: rgb(0, 0, 0);
+    letter-spacing: 3px;
+    text-shadow: 5px 5px 11px rgba(0,0,0,0.8);
+}
